@@ -1,14 +1,539 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>La Carolina Photo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>la-carolina-photo</title>
-    <script type="module" crossorigin src="/assets/index-BhWgcp4-.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-fHmJtqDk.css">
+    <!-- Usa tu CSS generado por Vite/Tailwind -->
+    <link rel="stylesheet" href="assets/index-fHmJtqDk.css" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="overflow-hidden p-0 m-0 bg-[#161616] text-white">
+    <!-- HEADER -->
+    <header
+      id="site-header"
+      class="w-full fixed top-0 left-0 z-50 bg-transparent transition-all"
+    >
+      <nav
+        class="md:flex place-content-between items-center px-6 py-4 w-full max-w-[1600px] mx-auto"
+      >
+        <div class="flex justify-center">
+          <h1
+            class="text-xl font-semibold uppercase font-poppins hidden md:block lg:block text-white text-shadow-lg"
+          >
+            La Carolina Photo
+          </h1>
+        </div>
+        <div class="flex justify-end">
+          <button
+            class="px-4 py-2 text-sm font-normal text-gray-800 bg-[#ECE6DFFF] hover:bg-[#ECE6DFAA] uppercase cursor-pointer tracking-[1.8px]"
+            data-open-modal="booking"
+          >
+            Agenda una llamada
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="overflow-visible">
+      <!-- HERO -->
+      <section
+        id="Home"
+        class="relative h-screen max-h-[1080px] bg-cover bg-center flex flex-col items-center justify-center text-white"
+        style="background-image: url('assets/hero-banner-filtered-bg-COsqHOs4.png');"
+      >
+        <!-- Capa “parallax” simple -->
+        <div
+          class="absolute inset-0 bg-cover bg-center will-change-transform transition-transform duration-75"
+          style="background-image: url('assets/hero-banner-filtered-bg-COsqHOs4.png');"
+        ></div>
+
+        <!-- Título móvil oculto en desktop -->
+        <h1
+          class="md:hidden lg:hidden font-poppins text-center text-[40px] sm:text-[60px] md:text-[90px] lg:text-[120px] text-shadow-lg z-10 absolute top-50"
+        >
+          La Carolina Photo
+        </h1>
+
+        <div
+          class="absolute bottom-0 flex flex-col items-center justify-center text-white py-30 px-8 z-10"
+        >
+          <h1
+            class="font-bodoni italic text-center text-[40px] sm:text-[60px] md:text-[90px] lg:text-[120px] text-shadow-lg"
+          >
+            No se trata de verte perfecta
+          </h1>
+          <h2
+            class="font-poppins uppercase font-light mb-2 text-[20px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-center text-shadow-lg tracking-[2.25px]"
+          >
+            se trata de reconocerte como la mujer increíble que ya sos
+          </h2>
+          <button
+            class="cursor-pointer border-2 hover:bg-[#FFFFFF22] hover:text-shadow-lg uppercase tracking-[1.8px] text-[10px] font-light px-6 py-2 mt-4"
+            data-open-modal="booking"
+          >
+            Reserva tu sesión
+          </button>
+        </div>
+      </section>
+
+      <!-- BLOQUE “SI HAS PENSADO…” -->
+      <section
+        class="relative bg-[#4f4f4f] bg-cover bg-center flex flex-col items-center justify-center text-white py-12 sm:py-30 px-4"
+      >
+        <span
+          class="text-[14px] sm:text-[12px] md:text-[13px] font-poppins font-light uppercase"
+        >
+          Si has pensado:
+        </span>
+
+        <div
+          class="p-4 text-[42px] sm:text-[28px] md:text-[36px] lg:text-[74px] font-bodoni text-center leading-tight"
+        >
+          <h2 class="flex flex-col">
+            <span class="uppercase">Me siento</span>
+            <span class="italic">invisible</span>
+            <span>
+              <span class="uppercase">frente al</span>
+              <span class="uppercase italic">espejo</span>
+            </span>
+          </h2>
+        </div>
+
+        <span class="font-poppins font-light py-3">○</span>
+
+        <div
+          class="flex flex-col md:flex-col lg:flex-row justify-between items-center w-full max-w-[1400px] px-4 py-2 text-[16px] sm:text-[14px] md:text-[15px] lg:text-[18px] font-poppins font-light gap-4"
+        >
+          <p class="w-full lg:w-[400px] text-center">
+            “No me siento lo suficientemente joven.”
+          </p>
+          <p class="w-full lg:w-[400px] text-center">
+            “No tengo el cuerpo perfecto.”
+          </p>
+          <p class="w-full lg:w-[400px] text-center">“Ya no es para mí.”</p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="About"
+        class="h-screen bg-[#f9f7f4] bg-cover bg-center flex flex-col items-center text-[#f2f2f2]"
+      >
+        <div
+          class="flex md:flex-col lg:flex-row w-full max-w-[1500px] text-shadow-5xs text-[#222222] lg:text-[#666666] text-center flex-1 justify-center items-center relative py-38"
+        >
+          <div class="w-full max-w-[1000px] z-10 px-5">
+            <span
+              class="uppercase text-[10px] sm:text-[11px] md:text-[12px] tracking-[2px]"
+            >
+              Quién soy
+            </span>
+
+            <p
+              class="py-4 max-w-[800px] mx-auto text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] leading-relaxed"
+            >
+              Carolina, es fotógrafa de boudoir desde el 2024, creyendo que las
+              mujeres necesitan un espacio para ser auténticas y audaces.
+            </p>
+
+            <h2
+              class="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[74px] font-bodoni uppercase leading-[1.1] tracking-tight py-4 text-shadow-xs"
+            >
+              Intuitiva, <br />
+              creativa, <br />
+              honesta, <br />
+              y <span class="lowercase italic">guiada por</span><br />
+              propósito.
+            </h2>
+
+            <div class="w-full p-5">
+              <button
+                class="px-8 py-2 text-sm font-light text-gray-800 bg-[#ECE6DFFF] uppercase cursor-pointer tracking-[1.8px]"
+              >
+                Conectar
+              </button>
+            </div>
+          </div>
+
+          <!-- Fotos laterales -->
+          <div
+            class="flex justify-center items-end absolute left-0 bottom-10 w-[20vh] sm:w-[25vh]"
+          >
+            <img
+              src="assets/about-photo-1-BZLfUJst.png"
+              class="scale-[1.2] sm:scale-[1.1] md:scale-[1.15] lg:scale-[1.25]"
+              alt="Carolina boudoir 1"
+            />
+          </div>
+          <div
+            class="flex justify-center items-start absolute right-0 top-10 w-[20vh] sm:w-[25vh]"
+          >
+            <img
+              src="assets/about-photo-2-BSP4PRLI.png"
+              class="scale-[1.2] sm:scale-[1.1] md:scale-[1.15] lg:scale-[1.25]"
+              alt="Carolina boudoir 2"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section
+        id="Portfolio"
+        class="no-select bg-[#4f4f4f] bg-cover bg-center flex flex-col items-center justify-center text-[#f2f2f2] p-5 py-20"
+      >
+        <span
+          class="text-[12px] sm:text-[13px] md:text-[14px] font-poppins uppercase p-2 text-center"
+        >
+          Mira mi trabajo
+        </span>
+        <h1
+          class="text-[48px] sm:text-[64px] md:text-[96px] lg:text-[128px] font-bodoni pb-0 mb-[-17px] text-center text-shadow-lg"
+        >
+          PORTFOLIO
+        </h1>
+
+        <div
+          class="flex flex-row justify-around w-full max-w-[1440px] flex-wrap"
+        >
+          <!-- Columna 1 -->
+          <div class="flex flex-col w-full md:w-1/3">
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-01-ChwId_BU.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 1"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-02-B0rD9rjN.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 2"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-03-CAFq5MWs.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 3"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-04-B9WNSPUp.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 4"
+              />
+            </div>
+          </div>
+
+          <!-- Columna 2 -->
+          <div class="flex flex-col w-full md:w-1/3">
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-05-JM7IIwQb.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 5"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-06-Dq1yBV_X.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 6"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-07-Ld1SJpMK.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 7"
+              />
+            </div>
+          </div>
+
+          <!-- Columna 3 -->
+          <div class="flex flex-col w-full md:w-1/3">
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-08-B1hJPAgR.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 8"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-09-CxhUHbtE.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 9"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-10-sFWwd07a.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 10"
+              />
+            </div>
+            <div class="p-[1vw]">
+              <img
+                src="assets/portfolio-11-s1KF3Jeu.jpg"
+                data-lightbox
+                class="cursor-pointer"
+                alt="Portfolio 11"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA “RETRATOS ÚNICOS…” -->
+      <section
+        class="bg-[#4f4f4f] bg-cover bg-center flex flex-col items-center text-[#f2f2f2] py-40"
+        style="background-image: url('assets/cta-background-CNWRuwkN.png');"
+      >
+        <div
+          class="w-full max-w-[1100px] py-6 text-center flex flex-col justify-center items-center"
+        >
+          <h2
+            class="font-bodoni uppercase leading-[1.1] p-4 text-[40px] sm:text-[60px] md:text-[80px] lg:text-[110px]"
+          >
+            Retratos únicos, hechos
+            <span
+              class="lowercase italic sm:text-7xl md:text-8xl lg:text-9xl relative sm:-bottom-2 md:-bottom-3 lg:-bottom-4 sm:-right-2 md:-right-3 lg:-right-4"
+              >con</span
+            >
+            alma.
+          </h2>
+          <p
+            class="font-poppins font-light max-w-[400px] py-8 text-[13px] sm:text-[14px] md:text-[15px]"
+          >
+            We'd love to hear more about your upcoming adventure. Let's create
+            something beautiful together.
+          </p>
+          <div class="w-full">
+            <button
+              class="px-10 py-2 text-sm font-light text-gray-800 bg-[#ECE6DFFF] uppercase cursor-pointer tracking-[1.8px]"
+              data-open-modal="booking"
+            >
+              Cotizar
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="w-full bg-[#212121] flex items-center justify-center">
+        <div
+          class="w-full p-5 flex flex-col md:flex-col lg:flex-row md:justify-center align-middle lg:justify-between text-white"
+        >
+          <div class="lg:w-[220px]">
+            <h1
+              class="text-xl font-light tracking-[1.8px] uppercase whitespace-nowrap py-2 text-center"
+            >
+              La Carolina Photo
+            </h1>
+          </div>
+          <div
+            class="flex flex-col sm:flex-col md:flex-row text-center justify-center align-middle uppercase"
+          >
+            <a href="#Home" class="px-5 py-2">Home</a>
+            <a href="#About" class="px-5 py-2">Sobre mí</a>
+            <a href="#Portfolio" class="px-5 py-2">Testimoniales</a>
+            <button
+              class="px-5 py-2 uppercase cursor-pointer"
+              data-open-modal="booking"
+            >
+              Agendar Sesión
+            </button>
+          </div>
+          <div
+            class="lg:w-[220px] flex clex-row justify-center md:justify-center lg:justify-end align-middle"
+          >
+            <a
+              href="https://www.instagram.com/lacarolina.photo/"
+              target="_blank"
+              class="px-2 py-2 cursor-pointer flex align-middle"
+            >
+              IG
+            </a>
+            <a
+              href="https://www.facebook.com/people/La-Carolina-Photo-Studio/61558761530041/"
+              target="_blank"
+              class="px-2 py-2 cursor-pointer flex align-middle"
+            >
+              FB
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] hidden"
+    >
+      <button
+        id="lightbox-close"
+        class="absolute top-5 right-5 text-white text-4xl font-bold cursor-pointer select-none"
+      >
+        ×
+      </button>
+      <img
+        id="lightbox-img"
+        src=""
+        class="max-w-[90vw] max-h-[90vh] object-contain rounded shadow-lg pointer-events-none select-none"
+        draggable="false"
+        alt="Foto ampliada"
+      />
+    </div>
+
+    <!-- MODAL CAL.COM -->
+    <div
+      id="booking-modal"
+      class="fixed inset-0 bg-[#000000ee] bg-opacity-90 flex justify-center items-center z-50 hidden"
+    >
+      <div class="relative w-screen h-full max-w-[1000px] max-h-[90vh]">
+        <div
+          id="my-cal-inline-30min"
+          class="w-full h-[800px] max-h-[90vh] overflow-auto bg-[#161616]"
+        ></div>
+        <button
+          id="booking-close"
+          class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+
+    <!-- JS básico para header, modal, lightbox y Cal.com -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Header background on scroll
+        const header = document.getElementById("site-header");
+        function updateHeader() {
+          if (window.scrollY > 10) {
+            header.classList.add("bg-[#FFFFFFDD]", "shadow-md");
+            header.classList.remove("bg-transparent");
+          } else {
+            header.classList.remove("bg-[#FFFFFFDD]", "shadow-md");
+            header.classList.add("bg-transparent");
+          }
+        }
+        window.addEventListener("scroll", updateHeader);
+        updateHeader();
+
+        // Modal booking (Cal.com)
+        const modal = document.getElementById("booking-modal");
+        const closeModalBtn = document.getElementById("booking-close");
+        const openModalBtns = document.querySelectorAll(
+          "[data-open-modal='booking']"
+        );
+
+        function openModal() {
+          modal.classList.remove("hidden");
+        }
+        function closeModal() {
+          modal.classList.add("hidden");
+        }
+
+        openModalBtns.forEach((btn) =>
+          btn.addEventListener("click", openModal)
+        );
+        closeModalBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxClose = document.getElementById("lightbox-close");
+
+        document.querySelectorAll("[data-lightbox]").forEach((img) => {
+          img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.remove("hidden");
+          });
+        });
+
+        function closeLightbox() {
+          lightbox.classList.add("hidden");
+          lightboxImg.src = "";
+        }
+
+        lightboxClose.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      });
+    </script>
+
+    <!-- Script de Cal.com (el mismo que usabas con Vue) -->
+    <script>
+      (function (C, A, L) {
+        let p = function (a, ar) {
+          a.q.push(ar);
+        };
+        let d = C.document;
+        C.Cal =
+          C.Cal ||
+          function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              const api = function () {
+                p(api, arguments);
+              };
+              const namespace = ar[1];
+              api.q = api.q || [];
+              if (typeof namespace === "string") {
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      Cal("init", "30min", { origin: "https://app.cal.com" });
+
+      Cal.ns["30min"]("inline", {
+        elementOrSelector: "#my-cal-inline-30min",
+        config: { layout: "month_view", theme: "dark" },
+        calLink: "lacarolinaphoto/30min",
+      });
+
+      Cal.ns["30min"]("ui", {
+        theme: "dark",
+        cssVarsPerTheme: {
+          light: { "cal-brand": "#50211b" },
+          dark: { "cal-brand": "#cda798" },
+        },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    </script>
   </body>
 </html>
